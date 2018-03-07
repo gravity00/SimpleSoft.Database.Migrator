@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\SimpleSoft.Database.Migrator.Logging.Microsoft\SimpleSoft.Database.Migrator.Logging.Microsoft.csproj" />
     <ProjectReference Include="..\..\src\SimpleSoft.Database.Migrator.Oracle\SimpleSoft.Database.Migrator.Oracle.csproj" />
     <ProjectReference Include="..\..\src\SimpleSoft.Database.Migrator.SqlServer\SimpleSoft.Database.Migrator.SqlServer.csproj" />
   </ItemGroup>
