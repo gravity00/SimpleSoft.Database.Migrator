@@ -7,7 +7,7 @@ namespace SimpleSoft.Database.Migrator
     /// Factory used to build <see cref="IMigrationInstanceScope"/> instances
     /// using a <see cref="IServiceScopeFactory"/>.
     /// </summary>
-    public class MigrationInstanceScopeFactory : IMigrationInstanceScopeFactory
+    public class MicrosoftMigrationInstanceScopeFactory : IMigrationInstanceScopeFactory
     {
         private readonly IServiceScopeFactory _scopeFactory;
 
@@ -16,12 +16,12 @@ namespace SimpleSoft.Database.Migrator
         /// </summary>
         /// <param name="scopeFactory">The service scope factory to be used</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public MigrationInstanceScopeFactory(IServiceScopeFactory scopeFactory)
+        public MicrosoftMigrationInstanceScopeFactory(IServiceScopeFactory scopeFactory)
         {
             _scopeFactory = scopeFactory ?? throw new ArgumentNullException(nameof(scopeFactory));
         }
 
         /// <inheritdoc />
-        public IMigrationInstanceScope Build() => new MigrationInstanceScope(_scopeFactory.CreateScope());
+        public IMigrationInstanceScope Build() => new MicrosoftMigrationInstanceScope(_scopeFactory.CreateScope());
     }
 }

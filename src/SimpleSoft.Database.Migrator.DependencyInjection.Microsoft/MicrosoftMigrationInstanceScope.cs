@@ -6,7 +6,7 @@ namespace SimpleSoft.Database.Migrator
     /// <summary>
     /// Scope used to resolve instances using a <see cref="IServiceScope"/>.
     /// </summary>
-    public class MigrationInstanceScope : IMigrationInstanceScope
+    public class MicrosoftMigrationInstanceScope : IMigrationInstanceScope
     {
         private readonly IServiceScope _scope;
 
@@ -15,13 +15,13 @@ namespace SimpleSoft.Database.Migrator
         /// </summary>
         /// <param name="scope">The service scope</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public MigrationInstanceScope(IServiceScope scope)
+        public MicrosoftMigrationInstanceScope(IServiceScope scope)
         {
             _scope = scope ?? throw new ArgumentNullException(nameof(scope));
         }
 
         /// <inheritdoc />
-        ~MigrationInstanceScope() => Dispose(false);
+        ~MicrosoftMigrationInstanceScope() => Dispose(false);
 
         /// <inheritdoc />
         public object GetInstance(Type type) => _scope.ServiceProvider.GetService(type);
