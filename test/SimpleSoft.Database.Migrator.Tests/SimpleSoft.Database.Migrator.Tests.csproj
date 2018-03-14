@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net4.6.2</TargetFramework>
     <IsPackable>false</IsPackable>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\SimpleSoft.Database.Migrator.Logging.NLog\SimpleSoft.Database.Migrator.Logging.NLog.csproj" />
     <ProjectReference Include="..\..\src\SimpleSoft.Database.Migrator.Logging.Microsoft\SimpleSoft.Database.Migrator.Logging.Microsoft.csproj" />
     <ProjectReference Include="..\..\src\SimpleSoft.Database.Migrator.Oracle\SimpleSoft.Database.Migrator.Oracle.csproj" />
     <ProjectReference Include="..\..\src\SimpleSoft.Database.Migrator.SqlServer\SimpleSoft.Database.Migrator.SqlServer.csproj" />

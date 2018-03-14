@@ -6,7 +6,7 @@ namespace SimpleSoft.Database.Migrator
     /// <summary>
     /// Class that represents a migration log.
     /// </summary>
-    public class MigrationLogger : IMigrationLogger
+    public class MicrosoftMigrationLogger : IMigrationLogger
     {
         private static readonly object[] EmptyArgs = new object[0];
         private readonly ILogger _logger;
@@ -15,7 +15,7 @@ namespace SimpleSoft.Database.Migrator
         /// Set log.
         /// </summary>
         /// <param name="logger"></param>
-        public MigrationLogger(ILogger logger)
+        public MicrosoftMigrationLogger(ILogger logger)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }

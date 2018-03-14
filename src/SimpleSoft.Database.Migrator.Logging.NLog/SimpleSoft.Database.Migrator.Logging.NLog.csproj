@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>SimpleSoft.Database.Migrator</RootNamespace>
+    <AssemblyTitle>SimpleSoft.Database.Migrator.Logging.NLog</AssemblyTitle>
+    <AssemblyName>SimpleSoft.Database.Migrator.Logging.NLog</AssemblyName>
+    <Description>Microsoft NLog extensions for SimpleSoft.Database.Migrator</Description>
+    <Product>SimpleSoft.Migrator</Product>
+    <Company>SimpleSoft.pt</Company>
+    <Copyright>Copyright © 2018 João Simões</Copyright>
+    <Authors>João Simões</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>../../tools/SimpleSoft.Database.snk</AssemblyOriginatorKeyFile>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <SignAssembly>true</SignAssembly>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GenerateAssemblyTitleAttribute>true</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>true</GenerateAssemblyDescriptionAttribute>
+    <TargetFrameworks>netstandard1.6;net4.5.1;</TargetFrameworks>
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <PackageId>SimpleSoft.Database.Migrator.Logging.NLog</PackageId>
+    <PackageTags>database;migration</PackageTags>
+    <PackageIconUrl>https://avatars2.githubusercontent.com/u/30837484</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/gravity00/SimpleSoft.Database.Migrator</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/gravity00/SimpleSoft.Database.Migrator/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/simplesoft-pt/Mediator.git</RepositoryUrl>
+    <GeneratePackageOnBuild Condition=" '$(BuildConfiguration)' == 'release' ">true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.17251</FileVersion>
+    <VersionPrefix>1.0.0-dev001</VersionPrefix>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleSoft.Database.Migrator.Abstractions\SimpleSoft.Database.Migrator.Abstractions.csproj" />
+    <PackageReference Include="NLog" Version="4.5.0-rc07" />
+  </ItemGroup>
+
+
+</Project>
